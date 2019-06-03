@@ -8,6 +8,10 @@ using univercity.Models;
 namespace univercity.Controllers
 
 {
+
+
+
+    // این یه تست توسط مدیر می باشد.
    
     public class AdminController : Controller
     {
