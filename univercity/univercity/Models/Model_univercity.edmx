@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="univercityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_adminstrator">
+          <Key>
+            <PropertyRef Name="code_national_teacher" />
+          </Key>
+          <Property Name="code_national_teacher" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="name_user" Type="nvarchar" MaxLength="20" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_teacher_presonal_information">
+          <Key>
+            <PropertyRef Name="code_national_teacher" />
+          </Key>
+          <Property Name="code_national_teacher" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" />
+          <Property Name="name_teacher" Type="nvarchar" MaxLength="20" />
+          <Property Name="family_teacher" Type="nvarchar" MaxLength="30" />
+          <Property Name="name_father" Type="nvarchar" MaxLength="20" />
+          <Property Name="code_sex" Type="bit" />
+          <Property Name="number_birth_certificate" Type="nvarchar" MaxLength="20" />
+          <Property Name="code_state" Type="int" />
+          <Property Name="code_city" Type="int" />
+          <Property Name="code_city_place_issue" Type="int" />
+          <Property Name="date_birth" Type="date" />
+          <Property Name="code_religion_din" Type="int" />
+          <Property Name="code_religion_mazhab" Type="int" />
+          <Property Name="code_national" Type="bit" />
+          <Property Name="name_country" Type="nvarchar" MaxLength="50" />
+          <Property Name="phone_number" Type="nvarchar" MaxLength="20" />
+          <Property Name="phone_home" Type="nvarchar" MaxLength="20" />
+          <Property Name="address_home" Type="nvarchar" MaxLength="500" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+          <Property Name="picture" Type="varbinary(max)" />
+          <Property Name="code_status_marrid" Type="int" />
+          <Property Name="code_status_employment" Type="int" />
+          <Property Name="code_status_occupation" Type="int" />
+          <Property Name="code_occupation" Type="int" />
+          <Property Name="code_type_cooperation" Type="int" />
+          <Property Name="phone_work" Type="nvarchar" MaxLength="20" />
+          <Property Name="address_work" Type="nvarchar" MaxLength="500" />
+          <Property Name="phone_necessary" Type="nvarchar" MaxLength="20" />
+          <Property Name="code_status_duty_system" Type="int" />
+          <Property Name="date_end_duty_system" Type="date" />
+          <Property Name="code_personnel" Type="nvarchar" MaxLength="20" />
+          <Property Name="faivorite" Type="nvarchar" MaxLength="500" />
+          <Property Name="name_user" Type="nvarchar" MaxLength="20" />
+          <Property Name="date_insert_information" Type="date" />
+          <Property Name="code_group_lesson" Type="int" />
+          <Property Name="code_status_account" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="univercityModelStoreContainer">
+          <EntitySet Name="tbl_adminstrator" EntityType="Self.tbl_adminstrator" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_teacher_presonal_information" EntityType="Self.tbl_teacher_presonal_information" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="univercityModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_adminstrator">
+          <Key>
+            <PropertyRef Name="code_national_teacher" />
+          </Key>
+          <Property Name="code_national_teacher" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="name_user" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="univercityEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_adminstrator" EntityType="Self.tbl_adminstrator" />
+          <EntitySet Name="tbl_teacher_presonal_information" EntityType="univercityModel.tbl_teacher_presonal_information" />
+        </EntityContainer>
+        <EntityType Name="tbl_teacher_presonal_information">
+          <Key>
+            <PropertyRef Name="code_national_teacher" />
+          </Key>
+          <Property Name="code_national_teacher" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name_teacher" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="family_teacher" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="name_father" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="code_sex" Type="Boolean" />
+          <Property Name="number_birth_certificate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="code_state" Type="Int32" />
+          <Property Name="code_city" Type="Int32" />
+          <Property Name="code_city_place_issue" Type="Int32" />
+          <Property Name="date_birth" Type="DateTime" Precision="0" />
+          <Property Name="code_religion_din" Type="Int32" />
+          <Property Name="code_religion_mazhab" Type="Int32" />
+          <Property Name="code_national" Type="Boolean" />
+          <Property Name="name_country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="phone_number" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="phone_home" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="address_home" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="code_status_marrid" Type="Int32" />
+          <Property Name="code_status_employment" Type="Int32" />
+          <Property Name="code_status_occupation" Type="Int32" />
+          <Property Name="code_occupation" Type="Int32" />
+          <Property Name="code_type_cooperation" Type="Int32" />
+          <Property Name="phone_work" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="address_work" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="phone_necessary" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="code_status_duty_system" Type="Int32" />
+          <Property Name="date_end_duty_system" Type="DateTime" Precision="0" />
+          <Property Name="code_personnel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="faivorite" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="name_user" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="date_insert_information" Type="DateTime" Precision="0" />
+          <Property Name="code_group_lesson" Type="Int32" />
+          <Property Name="code_status_account" Type="Boolean" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="univercityModelStoreContainer" CdmEntityContainer="univercityEntities">
+          <EntitySetMapping Name="tbl_adminstrator">
+            <EntityTypeMapping TypeName="univercityModel.tbl_adminstrator">
+              <MappingFragment StoreEntitySet="tbl_adminstrator">
+                <ScalarProperty Name="code_national_teacher" ColumnName="code_national_teacher" />
+                <ScalarProperty Name="name_user" ColumnName="name_user" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_teacher_presonal_information">
+            <EntityTypeMapping TypeName="univercityModel.tbl_teacher_presonal_information">
+              <MappingFragment StoreEntitySet="tbl_teacher_presonal_information">
+                <ScalarProperty Name="code_status_account" ColumnName="code_status_account" />
+                <ScalarProperty Name="code_group_lesson" ColumnName="code_group_lesson" />
+                <ScalarProperty Name="date_insert_information" ColumnName="date_insert_information" />
+                <ScalarProperty Name="name_user" ColumnName="name_user" />
+                <ScalarProperty Name="faivorite" ColumnName="faivorite" />
+                <ScalarProperty Name="code_personnel" ColumnName="code_personnel" />
+                <ScalarProperty Name="date_end_duty_system" ColumnName="date_end_duty_system" />
+                <ScalarProperty Name="code_status_duty_system" ColumnName="code_status_duty_system" />
+                <ScalarProperty Name="phone_necessary" ColumnName="phone_necessary" />
+                <ScalarProperty Name="address_work" ColumnName="address_work" />
+                <ScalarProperty Name="phone_work" ColumnName="phone_work" />
+                <ScalarProperty Name="code_type_cooperation" ColumnName="code_type_cooperation" />
+                <ScalarProperty Name="code_occupation" ColumnName="code_occupation" />
+                <ScalarProperty Name="code_status_occupation" ColumnName="code_status_occupation" />
+                <ScalarProperty Name="code_status_employment" ColumnName="code_status_employment" />
+                <ScalarProperty Name="code_status_marrid" ColumnName="code_status_marrid" />
+                <ScalarProperty Name="picture" ColumnName="picture" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="address_home" ColumnName="address_home" />
+                <ScalarProperty Name="phone_home" ColumnName="phone_home" />
+                <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+                <ScalarProperty Name="name_country" ColumnName="name_country" />
+                <ScalarProperty Name="code_national" ColumnName="code_national" />
+                <ScalarProperty Name="code_religion_mazhab" ColumnName="code_religion_mazhab" />
+                <ScalarProperty Name="code_religion_din" ColumnName="code_religion_din" />
+                <ScalarProperty Name="date_birth" ColumnName="date_birth" />
+                <ScalarProperty Name="code_city_place_issue" ColumnName="code_city_place_issue" />
+                <ScalarProperty Name="code_city" ColumnName="code_city" />
+                <ScalarProperty Name="code_state" ColumnName="code_state" />
+                <ScalarProperty Name="number_birth_certificate" ColumnName="number_birth_certificate" />
+                <ScalarProperty Name="code_sex" ColumnName="code_sex" />
+                <ScalarProperty Name="name_father" ColumnName="name_father" />
+                <ScalarProperty Name="family_teacher" ColumnName="family_teacher" />
+                <ScalarProperty Name="name_teacher" ColumnName="name_teacher" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="code_national_teacher" ColumnName="code_national_teacher" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
