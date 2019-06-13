@@ -26,7 +26,7 @@ namespace univercity.Controllers
             //مدیراصلی
 
             tbl_adminstrator tba = db.tbl_adminstrator.Where(a=> a.name_user==txt_usernam && a.password==txt_pass).SingleOrDefault();
-            if (tba.code_national_teacher==null)
+            if (tba==null)
             {
                 TempData["msg"] = "نام کاربری یا رمز یافت نشد";
                 return View("login");
