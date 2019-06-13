@@ -161,7 +161,10 @@
       <DependentUpon>Model_univercity.edmx</DependentUpon>
     </Content>
     <Content Include="Views\layout\_layout_admin.cshtml" />
+    <Content Include="Views\Admin\formInsert.cshtml" />
     <Content Include="Views\Admin\home.cshtml" />
+    <Content Include="Views\Admin\show_teacher.cshtml" />
+    <Content Include="Views\Admin\edite_teacher.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

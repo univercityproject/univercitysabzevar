@@ -1,0 +1,249 @@
+﻿@model IEnumerable<univercity.Models.tbl_teacher_presonal_information>
+
+@{
+    ViewBag.Title = "show_teacher";
+    Layout = "~/Views/layout/_layout_admin.cshtml";
+}
+
+<h2>لیست اساتید ثبت شده</h2>
+
+<p>
+    @Html.ActionLink("درج رکورد جدید", "formInsert")
+</p>
+@*@{
+    if (ViewBag.message == "successful")
+    {
+        <h1 style="color :green">عملیات با موفقیت انجام شد</h1>
+    }
+    else
+    {
+        <h1 style="color :red">خطا در اجرای عملیات</h1>
+
+    }
+}*@ 
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name_teacher)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.family_teacher)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name_father)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.code_sex)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.number_birth_certificate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.code_state)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.code_city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.code_city_place_issue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_birth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.code_religion_din)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.code_religion_mazhab)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.code_national)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name_country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone_home)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.address_home)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.picture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.code_status_marrid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.code_status_employment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.code_status_occupation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.code_occupation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.code_type_cooperation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone_work)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.address_work)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone_necessary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.code_status_duty_system)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_end_duty_system)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.code_personnel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.faivorite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name_user)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_insert_information)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.code_group_lesson)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.code_status_account)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name_teacher)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.family_teacher)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name_father)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.code_sex)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.number_birth_certificate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.code_state)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.code_city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.code_city_place_issue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_birth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.code_religion_din)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.code_religion_mazhab)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.code_national)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name_country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone_home)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.address_home)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.picture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.code_status_marrid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.code_status_employment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.code_status_occupation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.code_occupation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.code_type_cooperation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone_work)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.address_work)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone_necessary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.code_status_duty_system)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_end_duty_system)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.code_personnel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.faivorite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name_user)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_insert_information)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.code_group_lesson)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.code_status_account)
+        </td>
+        <td>
+            @Html.ActionLink("ویرایش", "Edit", new { id=item.code_national_teacher }) |
+            @*@Html.ActionLink("Details", "Details", new { id=item.code_national_teacher }) |*@
+            @Html.ActionLink("حذف", "delete_teacher", new { id=item.code_national_teacher })
+        </td>
+    </tr>
+}
+
+</table>
