@@ -7,6 +7,9 @@ using univercity.Models;
 
 namespace univercity.Controllers
 {
+    /// <summary>
+    /// Controler Master
+    /// </summary>
     public class masterController : Controller
     {
         univercityEntities db = new univercityEntities();

@@ -110,6 +110,13 @@
       <DependentUpon>Model_univercity.edmx</DependentUpon>
       <LastGenOutput>Model_univercity.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\a.jpg" />
+    <None Include="Resources\b.jpg" />
+    <None Include="Resources\c.jpg" />
+    <None Include="Resources\hamayesh.jpg" />
+    <None Include="Resources\icon.jpg" />
+    <None Include="Resources\table-time.jpg" />
+    <None Include="Resources\mapuniversity.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +153,11 @@
     <Compile Include="Models\Teacher\I_teacher.cs" />
     <Compile Include="Models\Teacher\Teacher_Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -180,6 +192,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
