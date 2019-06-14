@@ -8,9 +8,7 @@ using univercity.Models;
 namespace univercity.Controllers
 
 {
-    /// <summary>
-    ///  this is a test Teacher
-    /// </summary>
+   
     public class AdminController : Controller
     {
         univercityEntities db = new univercityEntities();
