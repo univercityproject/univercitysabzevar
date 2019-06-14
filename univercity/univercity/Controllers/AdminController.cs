@@ -6,10 +6,12 @@ using System.Web.Mvc;
 using univercity.Models;
 
 namespace univercity.Controllers
-   
+
 {
-   
-        public class AdminController : Controller
+    /// <summary>
+    ///  this is a test Teacher
+    /// </summary>
+    public class AdminController : Controller
     {
         univercityEntities db = new univercityEntities();
         // GET: Admin
